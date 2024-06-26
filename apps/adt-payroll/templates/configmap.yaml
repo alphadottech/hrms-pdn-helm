@@ -24,3 +24,4 @@ data:
     -UI.port: "443"
     -UI.scheme: "https"
     -UI.context: "/apigateway"
+    api.form.html: "ACCEPT_LEAVE_REQUEST,REJECT_LEAVE_REQUEST,ACCEPT_PRIORTIME_REQUEST,REJECT_PRIORTIME_REQUEST"
