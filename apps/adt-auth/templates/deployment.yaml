@@ -19,11 +19,29 @@ spec:
       - env:
         - name: server.port
           value: "{{ .Values.service.port }}"
+        - name: spring.datasource.password
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmspostgresqlpwd
+              key: PDN-HRMS-POSTGRESQL-PWD
+        - name: spring.datasource.username
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmspostgresqlusername
+              key: PDN-HRMS-POSTGRESQL-USERNAME
+        - name: app.jwt.secret
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmssecretjwt
+              key: PDN-HRMS-SECRET-JWT
+        - name: spring.datasource.url
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmsdatabaseurl
+              key: PDN-HRMS-DATABASE-URL   
         envFrom:
          - configMapRef: 
              name: {{ include "adt-auth.fullname" . }}-configmap  
-         - secretRef:
-             name: {{ include "adt-auth.fullname" . }}-secret             
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag}}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: {{ .Chart.Name }}

@@ -17,13 +17,26 @@ spec:
       - env:
         - name: server.port
           value: "{{ .Values.service.port }}"
+        - name: spring.datasource.password
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmspostgresqlpwd
+              key: PDN-HRMS-POSTGRESQL-PWD
+        - name: spring.datasource.username
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmspostgresqlusername
+              key: PDN-HRMS-POSTGRESQL-USERNAME
+        - name: spring.datasource.url
+          valueFrom:
+            secretKeyRef:
+              name: pdnhrmsdatabaseurl
+              key: PDN-HRMS-DATABASE-URL             
         - name: "server.servlet.context-path"
           value: "/expensemanagement"
         envFrom:
          - configMapRef: 
-             name: {{ include "adt-expensemanagement.fullname" . }}-configmap   
-         - secretRef:
-             name: {{ include "adt-expensemanagement.fullname" . }}-secret             
+             name: {{ include "adt-expensemanagement.fullname" . }}-configmap             
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag}}"
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         name: {{ .Chart.Name }}
