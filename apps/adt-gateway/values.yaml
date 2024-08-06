@@ -7,7 +7,7 @@ contextPath: /gateway
 image:
   repository: ajaymishraadt/gateway
   pullPolicy: Always
-  tag: 0.0.1-SNAPSHOT
+  tag: 0.0.1-RELEASE
   
 service:
   type: ClusterIP
