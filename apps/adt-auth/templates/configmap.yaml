@@ -22,3 +22,4 @@ data:
     spring.mail.host: "smtp.gmail.com"
     spring.mail.username: "teamhr.adt@gmail.com"
     spring.mail.password: "jrxccgegzqvjglql"
+    otp.duration.time: "300000"
