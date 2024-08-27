@@ -16,3 +16,8 @@ data:
     spring.datasource.hikari.validation-query: "SELECT 1"
     spring.datasource.hikari.connectionTimeoutRetry: "3"
     drive.parent.folder: "production"
+    spring.mail.cc: "teamhr.adt@gmail.com"
+    spring.mail.host: "smtp.gmail.com"
+    spring.mail.username: "teamhr.adt@gmail.com"
+    spring.mail.password: "jrxccgegzqvjglql"
+    spring.mail.properties.mail.smtp.auth: "true"

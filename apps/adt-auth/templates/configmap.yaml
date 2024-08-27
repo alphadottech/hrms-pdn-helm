@@ -19,6 +19,7 @@ data:
     spring.datasource.hikari.idle-timeout: "300000"
     spring.datasource.hikari.max-lifetime: "1800000"
     spring.datasource.hikari.auto-commit: "true"
-    spring.mail.host: "smtp-relay.brevo.com"
+    spring.mail.host: "smtp.gmail.com"
     spring.mail.username: "teamhr.adt@gmail.com"
     spring.mail.password: "jrxccgegzqvjglql"
+    otp.duration.time: "300000"
