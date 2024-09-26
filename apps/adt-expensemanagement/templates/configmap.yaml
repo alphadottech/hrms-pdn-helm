@@ -17,6 +17,6 @@ data:
     spring.mail.username: "teamhr.adt@gmail.com"
     spring.mail.password: "jrxccgegzqvjglql"
     spring.mail.properties.mail.smtp.auth: "true"
-    email.service.url: "https://hrms.alphadot.co.in/gateway"
+    email.service.url: "http://adt-gateway.sit-apps.svc.cluster.local:9091/gateway/utility"
     -Dmy.property: "hrms.alphadot.co.in"
     -Dmy.port: "443"

@@ -22,4 +22,5 @@ data:
     spring.mail.host: "smtp.gmail.com"
     spring.mail.username: "teamhr.adt@gmail.com"
     spring.mail.password: "jrxccgegzqvjglql"
+    spring.mail.properties.mail.smtp.auth: "true"
     otp.duration.time: "300000"
